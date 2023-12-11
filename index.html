@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=divice-width, initial-scale=1.0">
+    <title>yikexinsdreamclearinghouse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Serif+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/优化/logo白.png" class="logo">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="moi.html">MOI</a></li>
+                            <li><a href="portfolio.html">PORTFOLIO</a></li>
+                            <li><a href="vie.html">MA VIE</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <div class="button">
+        <a href="cv.pdf"download class="hero-btn red-btn">Télécharger mon CV</a>
+    </div>
+
+
+    <section class="footer">
+        <h4>Voilà</h4>
+        <p>Merci beaucoup d'avoir jeté un coup d'œil sur mon site web personnel<br>Bonne journée!</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Fait avec <i class="fa fa-heart-o"></i> Par Yang Kexin</p>
+    </section>
+
+
+
+
+<script>
+
+    var navLinks = document.gentElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

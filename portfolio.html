@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=divice-width, initial-scale=1.0">
+    <title>yikexinsdreamclearinghouse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-iqMSNSYFGlTYCX8KRJgTp3SNrF+OuU2B/1iANtkRnp5c2RQMR4iFqXhDpgDbczDN+wGqE5OpUoR58XnbTJJp3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Serif+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/优化/logo白.png" class="logo">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="moi.html">MOI</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="vie.html">MA VIE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </div>
+
+    <section class="portfolio">
+        <h1><h1>PORTFOLIO</h1>
+        <p>Voici quelques tableaux que j’ai peints sur ma tablette et des photos que j’ai pris</p>
+        <div class="gallery">
+            <img src="images/能力成就/3.jpg" id="img1" class="thumbnail" onclick="openImage('img1','images/能力成就/大三角.png')">
+            <img src="images/能力成就/ca1.jpg" id="img2" class="thumbnail" onclick="openImage('img2','images/能力成就/soulmate.png')">
+            <img src="images/能力成就/ca2.jpg" id="img3" class="thumbnail" onclick="openImage('img3','images/能力成就/sexualtension.png')">
+            <img src="images/能力成就/draco2.jpg" id="img4" class="thumbnail" onclick="openImage('img4','images/能力成就/malfoy.jpg')">
+            <img src="images/能力成就/zrl.jpg" id="img5" class="thumbnail" onclick="openImage('img5','images/能力成就/zhangrenlin.jpg')">
+            <img src="images/能力成就/shan.JPG" id="img6" class="thumbnail" onclick="openImage('img6','images/能力成就/shan.JPG')">
+            <img src="images/能力成就/kele.jpg" id="img7" class="thumbnail" onclick="openImage('img7','images/能力成就/coca.JPG')">
+            <img src="images/能力成就/rein.JPG" id="img8" class="thumbnail" onclick="openImage('img8','images/能力成就/rein.JPG')">
+            <img src="images/能力成就/dan.jpg" id="img9" class="thumbnail" onclick="openImage('img9','images/能力成就/20230722.png')">
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" class="modal-content">
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <h4>Voilà</h4>
+        <p>Merci beaucoup d'avoir jeté un coup d'œil sur mon site web personnel<br>Bonne journée!</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Fait avec <i class="fa fa-heart-o"></i> Par Yang Kexin</p>
+    </section>
+
+
+<script>
+
+
+    var navLinks = document.gentElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+
+
+    function openImage(id, newImagePath) {
+        var modal = document.getElementById('modal');
+        var modalImg = document.getElementById('modal-image');
+        var thumbnail = document.getElementById(id);
+
+        modal.style.display = 'block';
+        modalImg.src = newImagePath;
+    }
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+
+</script>
+
+</body>
+</html>

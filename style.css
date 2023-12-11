@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: white;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/优化/扉页.png);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.container{
+    padding: 5px 5%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+    nav .fa{
+    display: none;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    }
+
+.button a{
+    margin-left: 50%;
+    left: -5.5%;
+    position: relative;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+.logo{
+    width: 140px;
+    padding: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+    nav ul li a{
+        color:white;
+        text-decoration: none;
+        font-size: 15px;
+        position: relative;
+    }
+    nav ul li a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #942121;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    nav ul li a:hover::after{
+        width: 100%;
+    } 
+
+/*------------moi------------*/
+
+.moi{
+    width: 80%;
+    margin: auto;
+    padding-top: 10px;
+}
+    h1{
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+    }
+    p{
+            color: rgb(208, 222, 222);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+    h3{
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+div ul li{
+        color: rgb(208, 222, 222);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+        list-style: none;
+}
+    div ul li span{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .row{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+.moi-col{
+        flex-basis: 31%;
+        background: #283031;
+        background-image: url(images/优化/IMG_5829.jpg);
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+}
+    .moi-col:hover{
+        box-shadow: 0 0 20px 0 white;
+    }
+    @media (max-width: 700px){
+        .row{
+            flex-direction: column;
+        }
+    }
+
+
+/*------------portfolio------------*/
+
+.portfolio{
+    margin-top: 100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+    width: 71%;
+    margin: 100px auto 50px;
+}
+
+.gallery-col img{
+    width: 100%;
+    cursor: pointer;
+    
+}
+    .gallery img:hover{
+        transform: scale(1.05);
+        object-fit: cover;
+        transition: 0.2s linear;
+    }
+
+.thumbnail {
+    width: 100%;
+    margin: 30px;
+    cursor: pointer;
+}
+    .thumbnail img{
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+} 
+    .modal-content {
+        width: 60%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+
+@media (max-width: 700px){
+    .modal-content{
+        flex-direction: column;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+/*------------vie------------*/
+
+.vie input{
+    display: none;
+}
+
+.album{
+    width: 100%;
+    text-align: center;
+}
+
+h7{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+    h7::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background: #942121;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+    }
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.top-content{
+    background-image: url(images/优化/睡莲女.png);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+h6{
+    height: 100%;
+    font-size: 18px;
+    background-color: rgb(48, 48, 48);
+    line-height: 60px;
+    padding: 0 50px;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #d7d7d7;
+    cursor: pointer;
+    transition: color .5s;
+}
+    label:hover{
+        color: black;
+    }
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+    width: 80%;
+    margin: 100px auto 50px;
+}
+
+.pic{
+    position: relative;
+    height: 210px;
+    width: 280px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.pic img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+    .pic::before{
+        content: "MOMENT";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        margin-top: -80px;
+        opacity: 0;
+        transition: .3s;
+        transition-delay: .2s;
+        z-index: 1;
+    }
+    .pic::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        height: 0;
+        background-color: rgba(0,0,0,.4);
+        transition: .3s;
+    }
+
+.pic:hover::after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+
+#check1:checked ~ .album .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .album .photo-gallery .copains{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+    #check2:checked ~ .album .photo-gallery .voyage, 
+    #check2:checked ~ .album .photo-gallery .loisir,
+    #check2:checked ~ .album .photo-gallery .evenement{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+#check3:checked ~ .album .photo-gallery .voyage{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+    #check3:checked ~ .album .photo-gallery .copains, 
+    #check3:checked ~ .album .photo-gallery .loisir,
+    #check3:checked ~ .album .photo-gallery .evenement{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+#check4:checked ~ .album .photo-gallery .loisir{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+    #check4:checked ~ .album .photo-gallery .voyage, 
+    #check4:checked ~ .album .photo-gallery .copains,
+    #check4:checked ~ .album .photo-gallery .evenement{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+}
+#check5:checked ~ .album .photo-gallery .evenement{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+    #check5:checked ~ .album .photo-gallery .voyage, 
+    #check5:checked ~ .album .photo-gallery .copains,
+    #check5:checked ~ .album .photo-gallery .loisir{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+}  
+
+
+
+/*------------contact------------*/  
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: url(images/优化/IMG_5844.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+    .hero-btn:hover{
+        color: black;
+        border: 1px solid #1e1e1e;
+        background: rgb(184, 184, 184);
+        transition: 0.5s;
+    }
+
+@media(max-width:700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+    input, textarea{
+        color: white;
+    }
+
+
+/*------------footer------------*/  
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+    .footer h4{
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+.icons .fa{
+    color: white;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart-o{
+    color: white;
+}
+
+
+/*------------contact------------*/  
+
+#sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: url(images/优化/IMG_5844.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+    #sub-header h1{
+        margin-top: 100px;
+    }
+.contact{
+    width: 80%;
+    margin: auto;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-col-1{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+    .contact-col-1 div{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+        .contact-col-1 div .fa{
+            font-size: 28px;
+            margin: 10px;
+            margin-right: 30px;
+        }
+        .contact-col-1 div .p{
+            padding: 0;
+        }
+        .contact-col-1 div .h5{
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+            font-weight: 400;
+        }
+    
+.contact-col-2 input, .contact-col-2 textarea{
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 17px;
+        outline: none;
+        border: 1px solid white;
+        background-color: #1e1e1e;
+        box-sizing: border-box;
+}

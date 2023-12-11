@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=divice-width, initial-scale=1.0">
+    <title>yikexinsdreamclearinghouse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Serif+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+            <nav>
+                <img src="images/优化/logo白.png" class="logo">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="moi.html">MOI</a></li>
+                            <li><a href="portfolio.html">PORTFOLIO</a></li>
+                            <li><a href="vie.html">MA VIE</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+    </div>
+
+    <section class="moi">
+        <h1>A PROPOS DE MOI</h1>
+        <p>Yang Kexin<br>Nationalité : Chinoise<br>Date de naissance : 18/01/2006<br>MBTI : ENTJ</p>
+
+        <div class="row">
+            <div class="moi-col">
+                <h3>COMPETENCES</h3>
+                <ul>
+                    <li><span>DESSINER / ILLUSTRER</span><br>J’ai commencé à dessiner à l’âge de quatre ans et je maîtrise maintenant tous les types de peinture, y compris la peinture chinoise, la peinture à l’huile, le croquis, l’illustration, l’aquarelle et la gouache. </li>
+                    <li><span>PHOTOGRAPHIER</span><br>Quand j’étais petite, mon père m’a offert un Canon 5D Mark II. J’aime aussi prendre des photos avec des polaroïds, qui sont un excellent moyen de capturer de beaux moments.</li>
+                    <li><span>MONTAGE DE VIDEO</span><br>Je travaille avec l’agence avec laquelle j’ai communiqué avant de venir en France, et je fais des vidéos promotionnelles pour eux.</li>
+                    <li><span>TRILINGUE</span><br>Je parle plusieurs langues. Le chinois (mandarin) est ma langue maternelle; Pour l'anglais, j’ai passé FCE et j’ai étudié aux États-Unis et en Australie en tant qu’une étudiant d’échange. Et j'ai appris français pendant un an.</li>        
+                </ul>
+            </div>
+            <div class="moi-col">
+                <h3>EDUCATION</h3>
+                <ul>
+                    <li><span>EXPERIENCES</span><br>2023 - maintenant : IUT de Tarbes (Institut Universitaire de Technologie)<br>2022 - 2023 : IUT Henri Poincaré Longwy (Préparation aux formations scientifiques et technologiques pour une entrée en université française)<br>2020 - 2022 : Académie de Pékin / lycée HUIWEN de Pékin (Lycée) <br>2017 - 2020 : Collège Numéro 54 de Pékin (Collège)<br>2011 - 2017 : Académie Nouveau Talent de Pékin (Ecole primaire)</li>
+                    <li><span>PROJETS</span><br>Je viens de diplômer de la formation préparatoire et je souhaite étudier le métier du multimédia et de l’Internet pendant trois ans à l’IUT de Tarbes, en choisissant parcour de Création Numérique. Ensuite, je voudrais aller à l’école supérieure de design ou d’art pour étudier la communication visuelle, car c’est mon rêve depuis l’enfance.</li>
+                </ul>
+            </div>
+            <div class="moi-col">
+                <h3>REALISATIONS</h3>
+                <ul>
+                    <li>Membre du comité de publicité de la classe depuis l'école primaire jusqu'au lycée</li>
+                    <li>Passé le septième niveau de croquis quand j’étais au collège</li>
+                    <li>Gagné plus d’un millier de RMB en publiant mon travail sur Internet et en aidant les autres à dessiner</li>
+                    <li>Travaille avec l’agence avec laquelle j’ai communiqué avant de venir en France, et je fais des vidéos promotionnelles pour eux</li>
+                    <li>Remporté de nombreux prix artistiques dans des écoles et des villes en Chine</li>
+                    <li>J’ai appris le piano à l’école primaire, j’ai participé à de nombreux concours et spectacles, et maintenant j’apprends la guitare en autodidacte</li>
+                    <li>Fait partie de la chorale de la Télévision centrale de Chine et j'ai eu l'occasion de me produire au Golden Hall de Vienne (mais je l'ai manquée à cause d'un rhume soudain)</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <h4>Voilà</h4>
+        <p>Merci beaucoup d'avoir jeté un coup d'œil sur mon site web personnel<br>Bonne journée!</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Fait avec <i class="fa fa-heart-o"></i> Par Yang Kexin</p>
+    </section>
+
+<script>
+
+    var navLinks = document.gentElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
